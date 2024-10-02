@@ -1,0 +1,26 @@
+.characters {
+  padding: 20px; /* Add some padding around the characters section */
+}
+
+.character-list {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(6, 1fr); /* 8 equal columns */
+  gap: 10px; /* Space between items */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  list-style: none; /* Remove bullet points */
+}
+
+.character-item {
+  text-align: center; /* Center text and image */
+  border: 1px solid #ccc; /* Optional: Add border for visibility */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  padding: 10px; /* Optional: Add padding inside each item */
+}
+
+.character-image {
+  width: 100%; /* Make the image fill the width of the li */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Optional: Set a max height for images */
+  object-fit: cover; /* Optional: Crop images to fit */
+}

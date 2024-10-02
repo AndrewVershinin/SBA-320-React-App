@@ -3,10 +3,10 @@ import axios from 'axios';
 const API_URL = 'https://rickandmortyapi.com/api';
 
 // Function to get all character
-export const getAllCharacters = async () => {
+export const getAllCharacters = async (page = 1) => {
     try {
-        const res = await axios.get(`${API_URL}/character`);
-        return res.data;
+        const response = await axios.get(`${API_URL}/character?page=${page}`);
+        return response.data;
     } catch (error) {
         console.error('Error fetching characters:', error);
         throw error;
