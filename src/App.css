@@ -1,26 +1,242 @@
+body {
+  color: #e89ac7;
+  font-family: 'Shadows Into Light', cursive;
+}
+
 .characters {
-  padding: 20px; /* Add some padding around the characters section */
+  padding: 20px;
+  text-align: center;
+  color: #e89ac7;
+  overflow: hidden;
+  background-color: #f7f5f5;
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .character-list {
-  display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(6, 1fr); /* 8 equal columns */
-  gap: 10px; /* Space between items */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  list-style: none; /* Remove bullet points */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 1200px;
+  width: 100%;
+
 }
 
 .character-item {
-  text-align: center; /* Center text and image */
-  border: 1px solid #ccc; /* Optional: Add border for visibility */
-  border-radius: 5px; /* Optional: Add rounded corners */
-  padding: 10px; /* Optional: Add padding inside each item */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+
 }
 
+button {
+  background-color: none; /* Light green for default */
+  color: #53ad29;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: #f0f0de;
+  transform: scale(1.05); 
+}
+
+
+/* Transition Effect */
+button {
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+
+button i {
+  margin-right: 8px;
+}
+
+.liked i {
+  color: rgb(17, 252, 17); /* Make the heart white in liked state */
+}
+
+
 .character-image {
-  width: 100%; /* Make the image fill the width of the li */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 150px; /* Optional: Set a max height for images */
-  object-fit: cover; /* Optional: Crop images to fit */
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.battle-game {
+  text-align: center;
+}
+
+.character-slots {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.slot {
+  width: 150px;
+  height: auto;
+  border: 2px solid #000;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot img {
+  width: 100%;
+  height: auto;
+}
+
+.empty-slot {
+  font-size: 14px;
+  color: #999;
+}
+
+.battle-result {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
+.nav button {
+  background-color: #9de734;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 40px;
+  transition: background-color 1s;
+  animation: none;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.nav button:hover {
+  background-color: #53ad29;
+  animation: shake 2s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 20px;
+}
+
+.modal-overlay h2 {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Modal content with scaling effect */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0);
+  animation: scaleUp 0.3s forwards;
+  /* Scale effect on modal open */
+}
+
+
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+.favorite-characters {
+  text-align: center;
+  font-size: 30px;
+}
+
+.favorite-character-item {
+  text-decoration: none;
 }

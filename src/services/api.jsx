@@ -27,10 +27,11 @@ export const getCharacterById = async (id) => {
 // Function to get random caracter
 export const getRandomCharacter = async () => {
     try {
-        const randomId = Math.floor(Math.random() * 826) + 1; // 826 is total character count
-        const res = await axios.get(`${API_URL}/character/${randomId}`)
+      const randomId = Math.floor(Math.random() * 671) + 1;  // There are 671 characters in the Rick and Morty API
+      const response = await fetch(`https://rickandmortyapi.com/api/character/${randomId}`);
+      const data = await response.json();
+      return data;
     } catch (error) {
-        console.error('Error fetching character id:', error);
-        throw error;
+      console.error('Error fetching character:', error);
     }
-}
+  };
