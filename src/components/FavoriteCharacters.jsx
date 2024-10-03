@@ -16,7 +16,7 @@ const FavoriteCharacters = ({ favorites, toggleFavorite }) => {
                         />
                         {character.name}
                         <button onClick={() => toggleFavorite(character)}>
-                            Remove from Favorites
+                            Go away!
                         </button>
                     </li>
                 ))}

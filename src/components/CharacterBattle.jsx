@@ -65,7 +65,7 @@ const CharacterBattle = () => {
 
     return (
         <div className="battle-game">
-            <h1>Rick and Morty Battle Game</h1>
+            <h1>The Great Battle of the Rick and Morty universe</h1>
             <div className="character-slots">
                 {/* User Character */}
                 <div className="slot">
@@ -79,7 +79,7 @@ const CharacterBattle = () => {
                             <p>Points: {userPoints}</p>
                         </div>
                     ) : (
-                        <div className="empty-slot">User Character</div>
+                        <div className="empty-slot">YOUR CHARACTER</div>
                     )}
                 </div>
 
@@ -95,7 +95,7 @@ const CharacterBattle = () => {
                             <p>Points: {opponentPoints}</p>
                         </div>
                     ) : (
-                        <div className="empty-slot">Opponent Character</div>
+                        <div className="empty-slot">A COMPUTER CHARACTER</div>
                     )}
                 </div>
             </div>
@@ -108,11 +108,11 @@ const CharacterBattle = () => {
                 <div className="battle-result">
                     <h2>Battle Result:</h2>
                     {userPoints > opponentPoints ? (
-                        <p>User Wins with {userPoints} points!</p>
+                        <p>Rick-gendary! You won and scored {userPoints} points!</p>
                     ) : opponentPoints > userPoints ? (
-                        <p>Opponent Wins with {opponentPoints} points!</p>
+                        <p>Congrats on the epic fail, human! A robot wins with {opponentPoints} points!</p>
                     ) : (
-                        <p>It's a tie!</p>
+                        <p>It's a draw! But you're still a loser!</p>
                     )}
                 </div>
             )}

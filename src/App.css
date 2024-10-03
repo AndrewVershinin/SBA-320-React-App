@@ -87,17 +87,28 @@ button i {
 .character-slots {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 20px 100px;
 }
 
 .slot {
-  width: 150px;
+  width: 250px;
   height: auto;
-  border: 2px solid #000;
+  border: 2px solid #d6cfcf;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.slot p {
+  margin: 0;
+}
+
+.slot h3 {
+  margin: 5px;
 }
 
 .slot img {
@@ -106,12 +117,14 @@ button i {
 }
 
 .empty-slot {
-  font-size: 14px;
+  font-size: 24px;
   color: #999;
+  border-radius: 10px;
 }
 
 .battle-result {
   margin-top: 20px;
+  font-size: 40px;
 }
 
 button {
@@ -235,8 +248,21 @@ button {
 .favorite-characters {
   text-align: center;
   font-size: 30px;
+  
+}
+
+.favorite-character-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .favorite-character-item {
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
+
