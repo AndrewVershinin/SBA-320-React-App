@@ -82,8 +82,20 @@ const CharacterBattle = () => {
                         <div className="empty-slot">YOUR CHARACTER</div>
                     )}
                 </div>
-
-                {/* Opponent Character */}
+                {/* Display winner */}
+                {!isAnimating && userCharacter && opponentCharacter && (
+                    <div className="battle-result">
+                        <h2>Battle Result:</h2>
+                        {userPoints > opponentPoints ? (
+                            <p>Rick-gendary! You won and scored {userPoints} points!</p>
+                        ) : opponentPoints > userPoints ? (
+                            <p>Congrats on the epic fail, human! A robot wins with {opponentPoints} points!</p>
+                        ) : (
+                            <p>It's a draw! But you're still a loser!</p>
+                        )}
+                    </div>
+                )}
+                {/* Computer Character */}
                 <div className="slot">
                     {opponentCharacter ? (
                         <div>
@@ -103,19 +115,7 @@ const CharacterBattle = () => {
                 {isAnimating ? "Battling..." : "Start Battle"}
             </button>
 
-            {/* Display winner */}
-            {!isAnimating && userCharacter && opponentCharacter && (
-                <div className="battle-result">
-                    <h2>Battle Result:</h2>
-                    {userPoints > opponentPoints ? (
-                        <p>Rick-gendary! You won and scored {userPoints} points!</p>
-                    ) : opponentPoints > userPoints ? (
-                        <p>Congrats on the epic fail, human! A robot wins with {opponentPoints} points!</p>
-                    ) : (
-                        <p>It's a draw! But you're still a loser!</p>
-                    )}
-                </div>
-            )}
+
         </div>
     );
 
