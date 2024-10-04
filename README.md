@@ -4,7 +4,7 @@
 
 Your application must meet these requirements to pass (this it your Minimum Viable Product):
 
-1. Built with HTML, CSS, JavaScript, REACT, and Redux Toolkit.
+1. Built with HTML, CSS, JavaScript, REACT.
 2. Hosted on Heroku or Netlify.
 3. Frequent commits to GitHub.
 4. A README.md file in your GitHub repository with:
@@ -18,7 +18,6 @@ Your application must meet these requirements to pass (this it your Minimum Viab
 
 
 # The universe of Rick and Morty
-Live Demo
 You can view the live site here: [The universe of Rick and Morty Link](https://rick-and-morty-universe-sba.netlify.app/) 
 
 ## Technologies Used
