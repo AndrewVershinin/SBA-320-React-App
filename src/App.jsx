@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="app">
       <nav className='nav'>
-        <img src='./public/Rick-and-Morty.png' style={{maxWidt: '300px', maxHeight: '200px', padding: 0, margin: 0}}/>
+        <img src='../public/Rick-and-Morty.png' style={{maxWidt: '300px', maxHeight: '200px', padding: 0, margin: 0}}/>
         <button onClick={() => setCurrentPage('list')}>Character List</button>
         <button onClick={() => setCurrentPage('Favorite')}>Favorites</button>
         <button onClick={() => setCurrentPage('battle')}>Battle</button>
